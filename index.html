@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="home">
+    <section id="1" class="home">
         <div class="container">
             <nav>
             
                 <ul class="menu">
-                    <li class="menu_item">Додому</li>
-                    <li class="menu_item">Напрямки</li>
-                    <li class="menu_item">Галерея</li>
-                    <li class="menu_item">Контакти</li>
+                    <li ><a class="menu_item" href="#1">Додому</a></li>
+                    <li ><a class="menu_item" href="#2">Напрямки</a></li>
+                    <li><a  class="menu_item" href="#3">Галерея</a></li>
+                    <li ><a class="menu_item" href="#4">Контакти</a></li>
                 </ul>
             
         </nav>
@@ -27,7 +30,7 @@
         </div>
     </section>
 
-    <section class="sport">
+    <section id="2" class="sport">
         <div class="container">
             <div class="sport_about">
                 <div class="about_block"><img class="img_about" src="img/9.jpg" alt="code"></div>
@@ -51,13 +54,13 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, debitis reprehenderit ut quaerat ab quas illo quos consequuntur sed provident delectus sequi, incidunt adipisci! Ut repudiandae assumenda veniam quidem placeat!
                     </div>
                     
-                    <button class="more">Більше</button>
+                    <button class="more_w">Більше</button>
                 </div>
                 <div class="about_block"><img class="img_about" src="img/7.jpg" alt="code"></div>
             </div>
         </div>
     </section>
-    <section class="photos">
+    <section id="3" class="photos">
         <div class="container">
             <h1 class="about_header_c">Наші фотографії</h1>
             <div class="photos_wrapper">
@@ -70,7 +73,7 @@
             </div>
         </div>
     </section>
-    <section class="contact_info">
+    <section id="4" class="contact_info">
         <div class="container">
            <div class="row">
             <div class="info_block">
@@ -80,17 +83,19 @@
                    <div class="descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam porro repellendus eligendi eaque consectetur necessitatibus amet hic. Eos ex cumque aliquam quaerat nobis at impedit, quasi maxime, beatae ipsam asperiores!
                    </div>
-                   <a href="tel380995346778" class="phone">+38 099 534 6778</a>
-                   <a href="tel380688345674" class="phone">+38 68 834 5674</a>
-                   <div class="adress">м.Київ, вул. Хрещатик, 1</div>
+                   <div class="info_warpper">
+                    <div class="phone_about"><a href="tel380995346778" class="phone">+380 99 534 6778</a> <img class="phone_icon" src="img/icons/kyivstar.png" alt="kyivstar"></div>
+                    <div class="phone_about"><a href="tel380688345674" class="phone">+380 68 834 5674</a> <img class="phone_icon" src="img/icons/vodafone.png" alt="vodafone"></div>
+                    <div class="adress">м.Київ, вул. Хрещатик, 1</div>
+                   </div>
             </div>
             <div class="info_block">
                 <form id="form" class="feed-form" action="#">
-                    <input name="name" required maxlength="10" placeholder="Ім'я" type="text">
-                    <input name="email" required placeholder="Пошта" >
-                    <input name="text" required placeholder="Повідомлення" type="email">
+                    <input name="name" required maxlength="10" placeholder="Ім'я" type="text"> <div class="line"></div>
+                    <input name="email" required placeholder="Пошта" > <div class="line"></div>
+                    <input name="text" required placeholder="Повідомлення" type="text"> <div class="line"></div>
          
-                    <button class="button_submit">Відправити</button>
+                    <button class="glow-on-hover" type="button">Відправити</button>
                   </form>
             </div>
            </div>

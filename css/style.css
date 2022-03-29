@@ -1,11 +1,13 @@
-
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .container{
     width: 1100px;
     margin: 0 auto;
 }
 .home{
 	height: 600px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/background.jpg') center center/cover no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/bg/background.jpg') center center/cover no-repeat;
 
    
     
@@ -19,10 +21,12 @@
     padding: 40px 20px 0 600px;
 }
 .menu_item{
+    text-decoration: none;
     color: white;
+    font-weight: 300;
     cursor: pointer;
 }
-li:hover{
+a:hover{
     color: yellow;
 }
     
@@ -30,16 +34,19 @@ li:hover{
 .header{
     padding-top: 70px;
     width: 300px;
+    font-weight: 700;
     color: white;
 }
 .subheader{
     margin-top: 20px;
     width: 300px;
+    font-weight: 300;
     color: white;
 }
 .start{
     margin-top: 20px;
-    background-color: rgb(243, 243, 127) ; 
+    background-color: rgb(243, 243, 127) ;
+    font-weight: 700; 
     width: 100px;
     height: 30px;
     border: none;
@@ -55,14 +62,30 @@ button:hover{
     display: flex;
     justify-content: space-between;
 }
+.about_header{
+    font-weight: 700;
+}
+.text{
+    font-weight: 300;
+}
 .about_block{
     width: 350px;
 }
 .more{
     width: 150px;
     height: 45px;
+    font-weight: 700;
     margin-top: 40px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+}
+.more_w{
+    width: 150px;
+    height: 45px;
+    font-weight: 700;
+    color: white;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: white;
 }
 .webdev{
     background-color:rgb(49, 49, 49);
@@ -74,15 +97,18 @@ button:hover{
 }
 .about_header_w{
     color: white;
+    font-weight: 700;
 }
 .text_w{
     color: white;
+    font-weight: 300;
 }
 .photos{
     padding: 70px 0 70px 0;
 }
 .about_header_c{
     text-align: center;
+    font-weight: 700;
 }
 .photos_wrapper{
     margin-top: 40px;
@@ -97,8 +123,13 @@ button:hover{
     height: 200px;
 }
 .contact_info{
+    height: 400px;
     padding: 70px 0 70px 0;
-    background-color: gray;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/bg/for\ site.jpg') center center/cover no-repeat;
+}
+.title{
+    color: white;
+    font-weight: 700;
 }
 .row{
     display: flex;
@@ -107,11 +138,107 @@ button:hover{
 .info_block{
     width: 400px;
 }
-.drscr{
+
+.descr{
+    margin-top: 30px;
+    color: white;
+    font-weight: 300;
+}
+.info_warpper{
+    margin-top: 30px;
+}
+.feed-form{
+    margin-top: 90px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 303px;
+}
+input{
+    height: 54px;
+    background-color: #ffffff00;
+    border: none;
+    padding: 0 20px;
+    color: #4B4B4B;
+}
+.line{
+    
+    border-bottom: 1px solid white;
+}
+.glow-on-hover {
     margin-top: 50px;
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(24, 48, 25);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 .phone{
     text-decoration: none;
+    color: white;
+}
+.phone_about{
+    margin-top: 10px;
+}
+.phone_icon{
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+}
+.adress{
+    margin-top: 10px;
     color: white;
 }
 footer{
@@ -125,6 +252,7 @@ footer{
 .text_footer{
     width: 400px;
     color: white;
+    font-weight: 300;
 }
 .socialnet{
     margin-top: 20px;
